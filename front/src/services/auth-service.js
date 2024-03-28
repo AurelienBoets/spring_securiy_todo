@@ -1,14 +1,14 @@
 import api from "./api";
 
-const register = (name, email, password, roles) => {
-  return api.post("/auth/register", { name, email, password, roles });
+const register = (name, email, password) => {
+  return api.post("/auth/register", { name, email, password });
 };
 
 const login = (email, password) => {
-  return api.post("/auth/login", { email, password }).then((response) => {
-    console.log(response.data.data);
-    if (response.data.data.token) {
-      localStorage.setItem("user", JSON.stringify(response.data));
+  return api.post("/auth/login", { mail: email, password }).then((response) => {
+    console.log(response.data);
+    if (response.data.token) {
+      localStorage.setItem("user", JSON.stringify({ data: response.data }));
     }
     return response.data;
   });

@@ -24,6 +24,7 @@ public class UserController {
         String mail = credentials.get("mail");
         String password = credentials.get("password");
 
+
         if (service.checkUserNameExists(mail)) {
             if (service.verifyUser(mail, password)) {
                 String token = service.generateToken(mail, password);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { getUserDetails } from "../helpers/user-details";
-import authService from "../services/authService";
+import authService from "../services/auth-service";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -52,13 +52,13 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/products">
-                Products
+              <a className="nav-link" href="#">
+                Todo-list
               </a>
             </li>
             {isAdmin() && (
-              <a className="nav-link" href="#">
-                Create
+              <a className="nav-link" href="/todos/create">
+                Nouveau
               </a>
             )}
           </ul>
@@ -68,7 +68,7 @@ const Header = () => {
                 <li className="nav-item mr-4" style={{ listStyleType: "none" }}>
                   <button
                     className="btn btn-outline-success me-2"
-                    onClick={() => navigate("#")}
+                    onClick={() => navigate("/login")}
                   >
                     Connexion
                   </button>
@@ -76,7 +76,7 @@ const Header = () => {
                 <li className="nav-item" style={{ listStyleType: "none" }}>
                   <button
                     className="btn btn-outline-primary"
-                    onClick={() => navigate("#")}
+                    onClick={() => navigate("/register")}
                   >
                     Créer un compte
                   </button>

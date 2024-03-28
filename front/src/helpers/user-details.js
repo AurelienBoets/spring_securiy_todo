@@ -23,5 +23,5 @@ export const getUserDetails = () => {
       .join("")
   );
   const decoded = JSON.parse(jsonPayload);
-  return { name: decoded.sub, role: decoded.roles };
+  return { name: decoded.sub, role: decoded.role };
 };
