@@ -1,3 +1,21 @@
+# Preview
+
+### Login
+
+![Login Page](preview_image/localhost_3000_login.png)
+
+### Todo List
+
+![Todo List](preview_image/localhost_3000_todos_create.png)
+
+### Edit Todo
+
+![Edit Todo](preview_image/localhost_3000_todos_update_id=1.png)
+
+### Register User
+
+![Register](preview_image/localhost_3000_register.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
